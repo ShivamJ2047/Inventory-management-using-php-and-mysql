@@ -49,12 +49,14 @@ else{
         $conn2 = new mysqli($servername, $fusername, $fpassword,$username);
         $sql2 = "CREATE TABLE $username (
         id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        Items VARCHAR(30) NOT NULL,
-        Name VARCHAR(30) NOT NULL,
-        email VARCHAR(50),
-        reg_date TIMESTAMP
+        itemName VARCHAR(30) NOT NULL,
+        Department VARCHAR(30) NOT NULL,
+        itemSrNo VARCHAR(30) NOT NULL,
+        modelName VARCHAR(30) NOT NULL,
+        Status VARCHAR(30) NOT NULL,
+        dateOfPurchase VARCHAR(30) NOT NULL,
+        Name VARCHAR(30) NOT NULL
         )";
-
         if ($conn2->query($sql2) === TRUE) {
         echo "Table created successfully";
         } else {

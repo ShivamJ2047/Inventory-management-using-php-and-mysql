@@ -39,13 +39,13 @@ button:hover {
 /* Center the avatar image inside this container */
 .imgcontainer {
  text-align: center;
- margin: 24px 0 12px 0;
+ margin: 5px 0 5px 0;
 }
 
 /* Avatar image */
-img.avatar {
- width: 40%;
- border-radius: 50%;
+img.NIPER {
+ width: 20%;
+ border-radius: 20%;
 }
 
 /* Add padding to containers */
@@ -80,12 +80,13 @@ span.psw {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
+
+
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #f1f1f1;
   margin: 5px auto; /* 15% from the top and centered */
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
