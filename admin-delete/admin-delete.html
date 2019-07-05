@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box;}
+
+body {
+  background-color: #ffffcc;
+
+}
+button {
+ background-color: #4CAF50;
+ color: white;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border: none;
+ cursor: pointer;
+ width: 10%;
+}
+button:hover {
+ opacity: 0.8;
+}
+input[type=text]{
+ width: 20%;
+ padding: 12px 20px;
+ margin-left: 9cm;
+ margin-bottom: 0.5cm;
+ display: inline-block;
+ border: 1px solid #ccc;
+ box-sizing: border-box;
+}
+.container {
+ padding: 16px;
+}
+label {
+  position: absolute;
+}
+</style>
+</head>
+<body>
+<form action="admin-delete.php">
+ <div class="container">
+  <label for="UserName"><b>User Name</b></label>
+  <input type="text" placeholder="Enter User Name" name="UserName" required><br>
+  <label for="rownum"><b>Id number</b></label>
+  <input type="text" placeholder="Enter id num" name="rownum" required><br>
+  <button type="submit">Submit</button>
+</div>
+</form>
+</body>
+</html>
