@@ -1,6 +1,6 @@
 <?php
-$username = $_GET["uname"];
-$password = $_GET["psw"];
+$username = $_POST["uname"];
+$password = $_POST["psw"];
 if(strpos($username," ")!= FALSE||strpos($password," ") != FALSE){
   echo "Spaces are not allowed";
 }

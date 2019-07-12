@@ -1,8 +1,8 @@
 
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
-$username = $_GET['UserName'];
-$idnum = $_GET['rownum'];
+$username = $_POST['UserName'];
+$idnum = $_POST['rownum'];
 $servername= 'localhost';
 $fusername = 'root';
 $fpassword = '';

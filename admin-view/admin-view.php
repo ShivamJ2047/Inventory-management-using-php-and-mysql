@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 * {box-sizing: border-box;}
 
@@ -99,7 +98,7 @@ body {
   <div class="search-container">
     <form action="admin-view.php">
       <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <button type="submit">Submit</button>
     </form>
   </div>
 </div>
@@ -154,12 +153,11 @@ if ($result->num_rows > 0) {
          }
      }
      $conn1 = new mysqli($servername, $fusername, $fpassword, $row['username']);
-     $sql1 = "SELECT id,itemName , Department , itemSrNo , modelName , Status , dateOfPurchase , Name FROM $row[username]";
+     $sql1 = "SELECT id,itemName , Department , itemSrNo , modelName , Status , dateOfPurchase , Name FROM $row[username] WHERE itemName LIKE '$search%' OR Department LIKE '$search%' OR itemSrNo LIKE '$search%'";
      $result1 = $conn1->query($sql1);
      if ($result1->num_rows > 0) {
      // output data of each row
      while($row1 = $result1->fetch_assoc()) {
-     if($row1['itemName']==$search || $row1['Department']==$search || $row1['itemSrNo']==$search || $row1['modelName']==$search || $row1['Status']==$search || $row1['dateOfPurchase']==$search || $row1['username']==$search){
       if ($flag == "0"){
         echo "<table>
         <tr>
@@ -175,7 +173,6 @@ if ($result->num_rows > 0) {
       echo "
        <tr><td>" . $row1["id"] . "</td><td>" . $row1["itemName"] . "</td><td>".$row1["Department"] . "</td><td>" . $row1["itemSrNo"] . "</td><td>" . $row1["modelName"]  . "</td><td>" . $row1["Status"]  . "</td><td>" . $row1["dateOfPurchase"]  . "</td><td>" . $row1["Name"] . "</td></tr>";
       $flag = "1";
-     }
     }
    }
  }

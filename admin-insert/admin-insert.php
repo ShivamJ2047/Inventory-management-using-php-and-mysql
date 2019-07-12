@@ -62,13 +62,13 @@
 </html>
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
-$username = $_GET["name"];
-$itemName = $_GET["itemName"];
-$Dept = $_GET["Dept"];
-$itemSrNo = $_GET["itemSrNo"];
-$modelName = $_GET["modelName"];
-$Status = $_GET["Status"];
-$dateOfPurchase = $_GET["dateOfPurchase"];
+$username = $_POST["name"];
+$itemName = $_POST["itemName"];
+$Dept = $_POST["Dept"];
+$itemSrNo = $_POST["itemSrNo"];
+$modelName = $_POST["modelName"];
+$Status = $_POST["Status"];
+$dateOfPurchase = $_POST["dateOfPurchase"];
 $servername= 'localhost';
 $fusername = 'root';
 $fpassword = '';

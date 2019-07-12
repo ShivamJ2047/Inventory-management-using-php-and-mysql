@@ -36,8 +36,8 @@
 
   <?php
 error_reporting(E_ALL ^ E_NOTICE);
-$username = $_GET["uname"];
-$password = $_GET["psw"];
+$username = $_POST["uname"];
+$password = $_POST["psw"];
 $servername= 'localhost';
 $fusername = 'root';
 $fpassword = '';
